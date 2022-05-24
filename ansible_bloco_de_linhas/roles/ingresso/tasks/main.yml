@@ -1,0 +1,12 @@
+---
+  # Vamos adicionar um bloco de linhas em um arquivo
+- name: Vamos adicionar um texto completo no arquivo de hosts
+  blockinfile:
+    state: present # caso exista o arquivo
+    dest: /etc/hosts # destino do arquivo
+    content: | # Todo o conteúdo abaixo será inserido no arquivo
+      127.0.0.1       localhost
+      127.0.1.1       gab-devops
+      10.0.0.120      awx.awxparasysadmin.local
+   
+...

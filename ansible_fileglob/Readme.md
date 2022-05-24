@@ -1,0 +1,1 @@
+Iremos agora copiar vários arquivos locais para computadores remotos com o fileglob.

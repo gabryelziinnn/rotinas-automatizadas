@@ -1,0 +1,10 @@
+---
+
+  # Vamos adicionar um bloco de linhas em um arquivo
+- name: Vamos adicionar um texto completo no arquivo de hosts
+  reboot: # enviando este comando iremos rebootar as maquinas dos hosts
+    msg: "reboot das maquinas" # print opcional de reboot
+    pre_reboot_delay: 5 # delay de reboot (opcional)
+    post_reboot_delay: 10 # delay de uptime (opcional)
+  
+...

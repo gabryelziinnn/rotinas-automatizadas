@@ -1,0 +1,17 @@
+---
+
+- name: Listar os arquivos da pasta e grava-los
+  find:
+    paths: /home/gabryel/pipelines # defino o caminho a ser lido
+    hidden: yes # para ler arquivos ocultos
+    recurse: yes 
+    file_type: any # todos os tipos de arquivos
+  register: arquivos_coletados # registro a leitura
+
+- name: Deletar todos os arquivos da pasta
+  file:
+    path: /home/gabryel/pipelines
+    state: absent
+  with_items: "{{ arquivos_coletados }}" # defino a variavel acima
+
+...

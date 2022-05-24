@@ -1,0 +1,3 @@
+#ansible_ssh_port: 3000
+# neste arquivo, deve ser igual ao nome de host inserido no inventario 
+# para que eu defina configurações especificas para os hosts

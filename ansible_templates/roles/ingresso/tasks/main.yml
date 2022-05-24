@@ -1,0 +1,17 @@
+---
+# Não insira aspas nas variáveis para não ter elas inseridas no texto
+
+- name: Copiar o texto
+  template:
+    src: texto.txt
+    dest: /home/gabryel
+# verifique as variáveis para ver o texto
+
+- name: Alterar o arquivo de hosts
+  template:
+    src: hosts
+    dest: /etc/hosts
+  become: true
+
+
+...

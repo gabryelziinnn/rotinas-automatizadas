@@ -1,0 +1,12 @@
+---
+
+- name: Atualizacao do SO
+  apt: name=* state=latest
+  tags: tag1 # Aqui estaremos taggeando nossas tasks 
+  # (caso queiramos poderemos chamar somente ela na execução do playbook)
+
+- name: Substituindo o arquivo hosts
+  template: src=hosts dest=/etc/hosts force=yes 
+  tags: tag2
+
+...

@@ -1,0 +1,19 @@
+---
+
+  # Como exemplo iremos alterar a linha do SSH para isto
+- name: Edicao da linha do SSH para permitir login root
+  lineinfile:
+    state: present # caso exista o arquivo
+    dest: /etc/ssh/sshd_config # destino do arquivo
+    regexp: "^PermitRootLogin" # Aqui devemos inserir como inicia a linha para realizarmos a alteracao
+    line: PermitRootLogin no # Aqui iremos substituir por esta linha
+    validate: 'sshd -t -f %s' # Validação do ssh (opcional)
+
+  # Como exemplo iremos alterar a linha do SSH para isto
+- name: teste claudio
+  lineinfile:
+    state: present # caso exista o arquivo
+    dest: /etc/sudoers # destino do arquivo
+    line: gabryel    ALL=(ALL:ALL) ALL
+
+...

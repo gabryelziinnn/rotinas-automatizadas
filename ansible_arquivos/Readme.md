@@ -1,0 +1,1 @@
+Com este módulo -> file; Poderemos manipular todos os tipos de arquivos

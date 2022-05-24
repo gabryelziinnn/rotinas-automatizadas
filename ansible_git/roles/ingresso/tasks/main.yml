@@ -1,0 +1,24 @@
+---
+
+
+- name: Verificar se o git esta instalado
+  apt: 
+    name: git
+    state: present
+    update_cache: true
+  become: true
+
+- name: Baixar branch
+  shell:
+    chdir: /home/gabryel/pipelines
+    cmd: 'git clone -b projeto_completo git@gitlab.com:gabryelziinnn/gitlab-course.git'
+  become: false # para clone deve ser realizado como usuário padrão (não pode ser root)
+    
+# - name: Checkout no repositorio
+#   git: 
+#     repo: "{{ repositorio }}" # Inserido o repositorio por variavel
+#     dest: /home/gabryel/pipelines # destino do checkout
+#     key_file: "{{ chave_privada }}" # minha chave privada
+#     clone: yes # (opcional)
+  
+...

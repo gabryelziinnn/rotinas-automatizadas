@@ -1,0 +1,29 @@
+---
+
+- name: Atualizacao do SO
+  apt: name=* state=latest
+
+- name: Instalacao dos pacotes necessarios para ingresso da maquinas Ubuntu
+  apt:  
+    name: "{{ pacotes_ubuntu }}" # aqui eu insiro uma variavel na qual referenciarei em vars
+    state: latest 
+  when: ansible_distribution == 'Ubuntu' # com o valor adquirido atraves do comando:ansible -i * -u * -k -m setup; estou inserindo a condicao de que quando o SO for ubuntu, sera executada esta task
+  notify: Restart_ntp # aqui eu consumo o handlers (basta ter o mesmo nome dele)
+
+- name: Instalacao dos pacotes necessarios para ingresso da maquinas Debian
+  apt:
+    name: "{{ pacotes_debian }}" 
+    state: latest 
+  when: ansible_distribution == 'Debian' # estou inserindo a condicao de que quando o SO for Debian, sera executada esta task
+
+- name: Configurando o NTP
+  template: src=ntp.conf dest=/etc/ntp.conf force=yes owner=root group=ntp mode=750 # aqui consumo o template, basta no source ter o mesmo nome do arquivo
+  notify: Restart_ntp
+
+- name: Substituindo o arquivo hostname
+  template: src=hostname dest=/etc/hostname force=yes 
+
+- name: Substituindo o arquivo hosts
+  template: src=hosts dest=/etc/hosts force=yes 
+
+...

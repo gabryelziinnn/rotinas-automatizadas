@@ -1,0 +1,27 @@
+ip_da_maquina: 10.0.0.120
+nome_da_maquina: devops
+fqdn: .gabryel.lan.net.br
+ip_dc: 10.0.0.2
+pacotes_ubuntu:
+  - samba 
+  - smbclient 
+  - cifs-utils 
+  - winbind 
+  - libpam-mount 
+  - ntp 
+  - ntpdate 
+  - libnss-winbind 
+  - libpam-winbind 
+  - krb5-kdc
+pacotes_debian:
+  - ntp 
+  - krb5-user 
+  - krb5-config 
+  - winbind 
+  - samba 
+  - samba-common 
+  - smbclient 
+  - cifs-utils 
+  - libpam-krb5 
+  - libpam-winbind 
+  - libnss-winbind

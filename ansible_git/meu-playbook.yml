@@ -1,0 +1,6 @@
+---
+- name: Debian Like Ingress on DC
+  hosts: servers 
+  roles: # aqui insiro as pastas que existem dentro de roles
+    - ingresso
+...

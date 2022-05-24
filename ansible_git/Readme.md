@@ -1,0 +1,1 @@
+Iremos realizar o checkout de alguma branch para o computador

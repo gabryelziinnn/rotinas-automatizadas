@@ -1,0 +1,11 @@
+---
+
+- name: Ler o arquivo de cpu
+  slurp:
+    src: "/proc/cpuinfo" # local do arquivo que quero ler
+  register: cpuinfo # registre esta informacao com algum nome
+
+- name: printar a informacao
+  debug: # toda a mensagem abaixo é obrigatória (no lugar de cpuinfo insira o nome dado ao register)
+    msg: "{{ cpuinfo['content'] | b64decode }}"
+...

@@ -1,0 +1,18 @@
+---
+
+- name: Checar o uptime
+  command: uptime # Aqui estou passando o comando de uptime
+  register: command_output # gravando na variavel com este nome
+
+- name: command_output
+  debug:
+    var: command_output.stdout_lines # atraves do módulo debug, estou dando output do comando passado
+
+- name: comando shell (listar arquivos)
+  shell: 'ls -lsha *' # aqui posso rodar meus comando utilizando o shell
+  register: command_output2
+
+- name: command_output
+  debug:
+    var: command_output2.stdout_lines  
+...

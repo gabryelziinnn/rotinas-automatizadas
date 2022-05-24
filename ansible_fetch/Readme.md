@@ -1,0 +1,1 @@
+Este módulo é o reverso do COPY, o mesmo copia arquivos de um computador remoto, e guarda no computador local.

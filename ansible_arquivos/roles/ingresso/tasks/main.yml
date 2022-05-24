@@ -1,0 +1,13 @@
+---
+
+
+- name: Altera o dono e grupo de um arquivo
+  file: 
+    path: /home/gabryel/Imagens # caminho do diretorio
+    group: gabryel 
+    owner: gabryel
+    state: directory # para definir que é uma pasta
+    recurse: yes # Recursivo para todas as pastas e arquivos dentro deste diretório
+  become: true
+
+...

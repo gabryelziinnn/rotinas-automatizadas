@@ -1,0 +1,9 @@
+# ---
+# dependencies:
+#   - { role: php } 
+# ...
+
+# aqui posso inserir dependencias de uma certa acao antes que ela seja executada
+# posso referenciá-la através de roles
+# exemplo: crio uma nova role, e nela insiro minhas tasks, aqui eu faço referencia a esta role (como por exemplo o nome da role "php")
+# e entao sem que eu precise no meu playbook referenciar em primeiro lugar a role php, a mesma sera executada primeiro

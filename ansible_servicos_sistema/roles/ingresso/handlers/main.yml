@@ -1,0 +1,8 @@
+---
+
+- name: Restart_ntp # este nome deve ser igual ao referenciado em: notify (nas tasks)
+  systemd: state=restarted enabled=yes daemon_reload=yes name=ntp
+  
+...
+# aqui sao inseridas todas as acoes posteriores a uma tarefa 
+# (exemplo: apos a instalacao do nginx, posso inserir aqui que o mesmo deve ser habilitado na inicializacao)

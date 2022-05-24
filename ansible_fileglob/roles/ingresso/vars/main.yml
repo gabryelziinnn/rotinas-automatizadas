@@ -1,0 +1,3 @@
+repositorio: "git@gitlab.com:gabryelziinnn/gitlab-course.git"
+chave_privada: "/home/gabryel/.ssh/id_rsa"
+pasta_para_copiar: /home/gabryel/Documentos

@@ -1,0 +1,13 @@
+---
+# utilize o site: https://crontab.guru/
+- name: Alteracao de cronjob
+  cron: 
+    name: "teste"
+    minute: "*/5"
+    hour: "*/4"
+    day: "*"
+    month: "*"
+    weekday: "*/5"
+    job: 'logger "ansible-pilot"' # aqui iremos inserir os parametros que ficarão para rodar o cronjob
+    user: gabryel # defino em qual usuario rodará o cron
+...

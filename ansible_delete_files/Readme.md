@@ -1,0 +1,1 @@
+Iremos listar os arquivos de um local, e remover todos eles

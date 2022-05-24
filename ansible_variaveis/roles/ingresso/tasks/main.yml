@@ -1,0 +1,12 @@
+---
+
+- name: Inserir variaveis
+  lineinfile:
+    dest: "/etc/environment" # local que insere variaveis de ambiente
+    state: present
+    regexp: "^{{ item.key }}=" 
+    line: "{{ item.key }}={{ item.value }}" # para que insira as linhas em chave e valor
+  with_items: "{{ var_ambiente }}" # veja as variaveis de ambiente no arquivo -> meu-playbook.yml
+  become: true
+
+...

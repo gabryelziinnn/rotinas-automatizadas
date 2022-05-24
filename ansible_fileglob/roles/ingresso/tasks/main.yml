@@ -1,0 +1,12 @@
+---
+
+- name: Copiar varios arquivos
+  copy:
+    src: "{{ pasta_para_copiar }}"
+    dest: /home/gabryel/Documentos
+    owner: gabryel
+    mode: 0644
+  with_fileglob: # Aqui neste local eu insiro o que será copiado da pasta que especifiquei
+    - "*.*" # neste caso irei copiar todos os arquivos
+
+...

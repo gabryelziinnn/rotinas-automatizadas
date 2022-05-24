@@ -1,0 +1,11 @@
+---
+
+- name: Habilitar servico no boot
+  service:
+    name: "{{ servicos }}" # Aqui eu insiro o nome do servico
+    enabled: yes # habilito no boot
+    state: started # o estado do mesmo
+  become: true # deve ser root
+
+
+...

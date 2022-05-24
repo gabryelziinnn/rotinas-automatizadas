@@ -1,0 +1,8 @@
+---
+
+- name: Copia de arquivos remotos para a maquina local
+  fetch:
+    src: /home/gabryel/pipelines/gitlab-course/emp_db.db # Somente copia arquivos (não copia a pasta inteira)
+    dest: /home/gabryel/teste1
+
+...

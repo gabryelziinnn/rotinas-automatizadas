@@ -1,0 +1,1 @@
+Módulo  para setar permanentemente variáveis de ambiente nos hosts remotos

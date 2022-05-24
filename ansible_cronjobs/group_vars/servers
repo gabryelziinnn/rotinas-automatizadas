@@ -1,0 +1,9 @@
+ansible_ssh_user: gabryel
+ansible_ssh_pass: facil123 
+#ansible_become: yes
+ansible_become_user: root
+ansible_become_pass: facil123
+ansible_connection: ssh
+#ansible_ssh_private_key_file:
+# definições especificas de grupos de hosts definidos em meu inventario
+# o nome deste arquivo deve ser igual ao nome de grupo de hostos definido no inventario

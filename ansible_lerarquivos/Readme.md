@@ -1,0 +1,1 @@
+Módulo SLURP,Ler arquivos de hosts remotos e savá-los em arquivos

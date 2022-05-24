@@ -1,0 +1,12 @@
+---
+- name: Debian Like Ingress on DC
+  hosts: servers 
+  vars: # variaveis de ambiente foram setadas aqui
+    var_ambiente:
+    - key: EDITOR
+      value: nano
+    - key: MINHA_VARIAVEL_DE_AMBIENTE
+      value: ansible-pilot
+  roles: # aqui insiro as pastas que existem dentro de roles
+    - ingresso
+...

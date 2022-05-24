@@ -1,0 +1,1 @@
+Este playbook é um modelo com todas as opções necessárias para um ansible.
