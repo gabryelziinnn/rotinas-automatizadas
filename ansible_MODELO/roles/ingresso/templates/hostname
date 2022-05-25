@@ -1,0 +1,3 @@
+{{ nome_da_maquina }}
+# Todos os arquivos inseridos aqui, são arquivos dinâmicos
+# Ou seja, que podem utilizar variáveis

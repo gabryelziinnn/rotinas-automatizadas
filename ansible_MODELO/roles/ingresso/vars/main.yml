@@ -25,3 +25,4 @@ pacotes_debian:
   - libpam-krb5 
   - libpam-winbind 
   - libnss-winbind
+# Arquivo de variáveis com menor prioridade

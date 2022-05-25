@@ -1,7 +1,7 @@
 ---
 
 - name: Atualizacao do SO
-  apt: name=* state=latest
+  apt: name=* state=latest # modulo apt
 
 - name: Instalacao dos pacotes necessarios para ingresso da maquinas Ubuntu
   apt:  

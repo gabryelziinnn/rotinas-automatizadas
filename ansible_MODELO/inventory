@@ -1,5 +1,5 @@
-[servers]
-#ubuntu ansible_ssh_host=10.0.0.120
+[servers] # Nome qualquer para meu grupo de hosts
+#ubuntu ansible_ssh_host=10.0.0.120 # Nome de definição reconhecido pelo ansible, ip de host
 debian ansible_ssh_host=10.0.0.160
 #debian ansible_ssh_host=192.168.1.109
 #ubuntu ansible_ssh_host=192.168.1.110

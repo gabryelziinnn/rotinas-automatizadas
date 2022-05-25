@@ -1,0 +1,6 @@
+---
+- name: Debian Like Ingress on DC # nome Qualquer
+  hosts: servers # É o nome de grupo de hosts que estão em meu inventory
+  roles: # aqui insiro as pastas que existem dentro de roles
+    - ingresso
+...

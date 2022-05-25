@@ -1,0 +1,4 @@
+127.0.0.1       localhost
+{{ ip_da_maquina }}    {{ nome_da_maquina }}{{ fqdn }}     {{ nome_da_maquina }}
+# Todos os arquivos inseridos aqui, são arquivos dinâmicos
+# Ou seja, que podem utilizar variáveis
